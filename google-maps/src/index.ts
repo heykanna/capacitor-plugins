@@ -1,8 +1,16 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-import { LatLngBounds, MapType, Marker } from './definitions';
+import {
+  MapType,
+  Marker,
+  Polygon,
+  Circle,
+  Polyline,
+  StyleSpan,
+  LatLngBounds
+} from './definitions';
 import { GoogleMap } from './map';
 
-export { GoogleMap, LatLngBounds, MapType, Marker };
+export { GoogleMap, MapType, Marker, Polygon, Circle, Polyline, StyleSpan, LatLngBounds };
 
 declare global {
   export namespace JSX {
