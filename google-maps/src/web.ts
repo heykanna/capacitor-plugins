@@ -35,6 +35,7 @@ import type {
   RemoveCirclesArgs,
   AddPolylinesArgs,
   RemovePolylinesArgs,
+  FitBoundsArgs,
 } from './implementation';
 
 export class CapacitorGoogleMapsWeb
@@ -246,6 +247,12 @@ export class CapacitorGoogleMapsWeb
         lng: bounds.getNorthEast().lng(),
       },
     });
+  }
+
+  async fitBounds(_args: FitBoundsArgs): Promise<void> {
+    const map = this.maps[_args.id].map;
+    const bounds = this.getLatLngBounds(_args.bounds);
+    map.fitBounds(bounds, _args.padding);
   }
 
   async addMarkers(_args: AddMarkersArgs): Promise<{ ids: string[] }> {

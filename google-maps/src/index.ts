@@ -6,10 +6,11 @@ import {
   Circle,
   Polyline,
   StyleSpan,
+  LatLngBounds
 } from './definitions';
 import { GoogleMap } from './map';
 
-export { GoogleMap, MapType, Marker, Polygon, Circle, Polyline, StyleSpan };
+export { GoogleMap, MapType, Marker, Polygon, Circle, Polyline, StyleSpan, LatLngBounds };
 
 declare global {
   export namespace JSX {
